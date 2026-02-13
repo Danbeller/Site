@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Info Tech Araçatuba - Suporte Técnico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonte Orbitron -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f1c2e;
+      color: white;
+    }
+
+    header {
+      background-color: #1a2b4c;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      text-align: center;
+      color: #acabab;
+    }
+
+    .logo img {
+      width: 90px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    .hero {
+      background-image: url('https://imgur.com/7PKMaSr.png');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 78px;
+      margin-bottom: 60px;
+      color: #fcdb24;
+      text-shadow: -2px -2px 0 #646464,
+                   2px -2px 0 #5f5f5f,
+                  -2px  2px 0 #3a3a3a,
+                   4px  4px 0 #636262;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .hero p {
+      font-size: 28px;
+      color: black;
+      font-family: 'Orbitron', sans-serif;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .hero button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .hero button:hover {
+      background-color: #0056b3;
+    }
+
+    .services {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 60px 20px;
+      background-color: #14263f;
+    }
+
+    .service {
+      text-align: center;
+      max-width: 250px;
+      margin: 20px;
+    }
+
+    .service img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .service h3 {
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 16px;
+    }
+
+    footer {
+      background-color: #1a2b4c;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .brand-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .brands h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #e9e505;
+      font-weight: 700;
+    }
+
+    .brand img {
+      display: block;
+      margin: 8px auto 0;
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      nav {
+        text-align: center;
+        width: 100%;
+      }
+      nav a {
+        display: inline-block;
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://imgur.com/xt1dhAd.png" alt="Logo Info Tech Araçatuba">
+      <div style="font-size: 100%;">Info Tech Araçatuba</div>
+    </div>
+    <nav>
+      <a href="servicos.html">SERVIÇOS</a>
+      <a href="sobre.html">SOBRE</a>
+      <a href="https://wa.me/5518996622714?text=Olá%20quero%20mais%20informações" target="_blank">CONTATO</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>SUPORTE TÉCNICO CONFIÁVEL</h1>
+    <p>
+      Oferecemos serviços especializados em TI para resolver seus problemas com eficiência e segurança.
+    </p>
+    <button onclick="window.open('https://www.facebook.com/infotecharcatuba/', '_blank')" 
+            style="position: absolute; top: 10px; left: 10px; background-color: #1877f2; color: white; border: none; padding: 8px 8px; font-size: 18px; border-radius: 8px; cursor: pointer;">
+      FACEBOOK
+    </button>
+  </section>
+
+  <section class="services">
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/100/computer.png" alt="Manutenção">
+      <h3>Manutenção</h3>
+      <p>Reparo e otimização de computadores e notebooks com rapidez e qualidade.</p>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/100/network.png" alt="Redes">
+      <h3>Redes</h3>
+      <p>Instalação e configuração de redes domésticas e corporativas seguras.</p>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/100/lock.png" alt="Segurança">
+      <h3>Segurança</h3>
+      <p>Proteção de dados, antivírus, backups e soluções contra invasões.</p>
+    </div>
+  </section>
+
+  <section class="brands">
+    <h2 style="text-align: center;">Marcas que confiamos</h2>
+    <div class="brand-logos">
+      <a href="https://imgur.com/8SgGLnU" target="_blank" class="brand">
+        NVIDIA
+        <img src="https://imgur.com/8SgGLnU.png" alt="NVIDIA logo preview">
+      </a>
+      <a href="https://imgur.com/V2igShR" target="_blank" class="brand">
+        AMD
+        <img src="https://imgur.com/V2igShR.png" alt="AMD logo preview">
+      </a>
+      <a href="https://imgur.com/QzVEkml" target="_blank" class="brand">
+        Intel
+        <img src="https://imgur.com/QzVEkml.png" alt="Intel logo preview">
+      </a>
+      <a href="https://imgur.com/VfjwkDd" target="_blank" class="brand">
+        DELL
+        <img src="https://imgur.com/VfjwkDd.png" alt="Dell logo preview">
+      </a>
+      <a href="https://imgur.com/0vMiGmo" target="_blank" class="brand">
+        LENOVO
+        <img src="https://imgur.com/0vMiGmo.png" alt="Lenovo logo preview">
+      </a>
+      <a href="https://imgur.com/w06FtXj" target="_blank" class="brand">
+        MICROSOFT
+        <img src="https://imgur.com/w06FtXj.png" alt="Microsoft logo preview">
+      </a>
+    </div>
+  </section>
+
+  <footer style="text-align: center; padding: 15px; background-color: #f1f1f1; font-size: 14px; color: #333;">
+    © 2026 Info Tech Araçatuba. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
