@@ -67,20 +67,22 @@
       text-align: center;
       margin-top: 50px;
     }
+
+    /* Ajuste da imagem central */
     .imagem-manutencao {
-      position: relative;
-      height: 800px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       margin-top: 40px;
+      height: 400px;             /* altura fixa para não ultrapassar o rodapé */
+      overflow: hidden;          /* evita transbordo */
     }
     .imagem-manutencao img {
-      position: absolute;
-      top: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 600px;
-      height: 400px;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
+
     footer {
       text-align: center;
       padding: 5px;
@@ -95,12 +97,12 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      width: 360px; /* aumentei largura da coluna */
+      width: 360px;
       padding: 10px;
     }
     .lateral img {
-      width: 340px;   /* antes 225px → +50% */
-      height: 260px;  /* antes 175px → +50% */
+      width: 306px;   /* reduzido em 10% */
+      height: 234px;  /* reduzido em 10% */
       margin: 25px 0;
       opacity: 0.95;
       border-radius: 8px;
@@ -108,10 +110,20 @@
     .conteudo {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
     .principal {
       flex: 1;
       padding: 0 20px;
+      min-height: 1200px; /* aumenta altura vertical da coluna central */
+    }
+    hr {
+      border: none;
+      height: 2px;
+      background-color: #333;
+      margin: 4px 0;
+      width: 100%;
     }
   </style>
 </head>
@@ -169,10 +181,11 @@
       <img src="https://imgur.com/qkJuisR.png" alt="Imagem 5">
       <img src="https://imgur.com/3X6uY1V.png" alt="Imagem 6">
       <img src="https://imgur.com/kNYXa4e.png" alt="Imagem 7">
+      <img src="https://imgur.com/bHRM9vr.png" alt="Imagem 8">
     </div>
   </div>
 
-  <hr style="border: none; height: 2px; background-color: #333; margin: 4px 0;">
+  <hr>
   <footer>
     © 2026 Info Tech Araçatuba. Todos os direitos reservados.
   </footer>
