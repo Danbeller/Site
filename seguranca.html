@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ordem de Serviço - Info Tech</title>
+<title>Ordem de Serviço - Segurança Digital</title>
 
 <style>
 body {
@@ -77,7 +77,7 @@ button:hover {
 
 <body>
 
-<h1>Solicitação de Ordem de Serviço</h1>
+<h1>Solicitação de Ordem de Serviço - Segurança Digital</h1>
 
 <form id="formOS">
 
@@ -90,19 +90,23 @@ button:hover {
 <label for="email">E-mail:</label>
 <input type="email" id="email" name="email">
 
+<label for="empresa">Empresa/Organização:</label>
+<input type="text" id="empresa" name="empresa">
+
 <label for="endereco">Endereço:</label>
 <input type="text" id="endereco" name="endereco">
 
-<label for="equipamento">Equipamento:</label>
-<select id="equipamento" name="equipamento" required>
+<label for="tipoServico">Tipo de Serviço:</label>
+<select id="tipoServico" name="tipoServico" required>
   <option value="">Selecione...</option>
-  <option>Computador Desktop</option>
-  <option>Notebook</option>
-  <option>Servidor</option>
-  <option>Rede/Infraestrutura</option>
+  <option>Proteção de Dados</option>
+  <option>Instalação/Configuração de Antivírus</option>
+  <option>Backup e Recuperação</option>
+  <option>Monitoramento de Segurança</option>
+  <option>Prevenção contra Invasões</option>
 </select>
 
-<label for="problema">Descrição do Problema:</label>
+<label for="problema">Descrição da Necessidade/Problema:</label>
 <textarea id="problema" name="problema" rows="4" required></textarea>
 
 <label for="data">Data Preferencial:</label>
@@ -126,22 +130,24 @@ document.getElementById("formOS").addEventListener("submit", function(e) {
   let nome = document.getElementById("nome").value;
   let telefone = document.getElementById("telefone").value;
   let email = document.getElementById("email").value;
+  let empresa = document.getElementById("empresa").value;
   let endereco = document.getElementById("endereco").value;
-  let equipamento = document.getElementById("equipamento").value;
+  let tipoServico = document.getElementById("tipoServico").value;
   let problema = document.getElementById("problema").value;
   let data = document.getElementById("data").value;
   let urgencia = document.getElementById("urgencia").value;
 
   let mensagem =
-`📋 *Nova Ordem de Serviço*
+`📋 *Nova Ordem de Serviço - Segurança Digital*
 
 👤 Cliente: ${nome}
+🏢 Empresa: ${empresa}
 📞 Telefone: ${telefone}
 📧 Email: ${email}
 📍 Endereço: ${endereco}
 
-💻 Equipamento: ${equipamento}
-🛠 Problema: ${problema}
+🔐 Serviço: ${tipoServico}
+🛡 Detalhes: ${problema}
 
 📅 Data Preferencial: ${data}
 ⚠ Urgência: ${urgencia}`;

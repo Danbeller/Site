@@ -48,7 +48,46 @@
     }
     .botao-servico:hover {
       background-color: green; /* cor ao passar o mouse */
-      color: #fff; /* opcional: texto branco para contraste */
+      color: #fff; /* texto branco para contraste */
+    }
+    /* Botão de retorno */
+    .botao-voltar {
+      background-color: #FFD700;
+      color: #000;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .botao-voltar:hover {
+      background-color: #FFA500;
+      color: #fff;
+    }
+    .centralizado {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .imagem-manutencao {
+      position: relative;
+      height: 800px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .imagem-manutencao img {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+    }
+    footer {
+      text-align: center;
+      padding: 5px;
+      background-color: #f1f1f1;
+      font-size: 14px;
+      color: #333;
     }
   </style>
 </head>
@@ -64,36 +103,35 @@
   </div>
 
   <div class="servico">
-    <h2>Redes e Servidores</h2>
-    <p>Instalação, configuração e suporte para redes corporativas e domésticas.</p>
+    <button onclick="window.open('servico.html', '_blank')" class="botao-servico">
+      Redes e Servidores
+    </button>
+    <p style="font-size: 20px;">Instalação, configuração e suporte para redes corporativas e domésticas.</p>
   </div>
 
   <div class="servico">
-    <h2>Segurança Digital</h2>
-    <p>Proteção de dados, antivírus, backups e soluções contra invasões.</p>
+    <button onclick="window.open('seguranca.html', '_blank')" class="botao-servico">
+      Segurança Digital
+    </button>
+    <p style="font-size: 20px;">Proteção de dados, antivírus, backups e soluções contra invasões.</p>
   </div>
 
-  <div style="text-align: center; margin-top: 50px;">
-    <button 
-      onclick="window.location.href='index.html'" 
-      style="background-color: #FFD700; 
-             color: #000; 
-             border: none; 
-             padding: 12px 25px; 
-             font-size: 18px; 
-             border-radius: 12px; 
-             cursor: pointer;"
-      onmouseover="this.style.backgroundColor='#FFA500';"
-      onmouseout="this.style.backgroundColor='#FFD700';">
+  <!-- Botão de retorno -->
+  <div class="centralizado">
+    <button onclick="window.location.href='index.html'" class="botao-voltar">
       Voltar para a página inicial
     </button>
   </div>
 
-  <div style="position: relative; height: 800px; text-align: center; margin-top: 40px;">
-    <img src="https://imgur.com/NHHwdET.png" alt="Página em Manutenção"
-         width="600" height="400"
-         style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%);" />
+  <!-- Imagem de manutenção -->
+  <div class="imagem-manutencao">
+    <img src="https://imgur.com/NHHwdET.png" alt="Página em Manutenção">
   </div>
+
+  <hr style="border: none; height: 2px; background-color: #333; margin: 4px 0;">
+  <footer>
+    © 2026 Info Tech Araçatuba. Todos os direitos reservados.
+  </footer>
 
 </body>
 </html>
