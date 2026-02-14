@@ -37,7 +37,7 @@
       text-decoration: underline;
     }
     .botao-servico {
-      background-color: #FFD700; /* cor original (dourado) */
+      background-color: #FFD700;
       color: #000;
       border: none;
       width: 550px;
@@ -47,10 +47,9 @@
       cursor: pointer;
     }
     .botao-servico:hover {
-      background-color: green; /* cor ao passar o mouse */
-      color: #fff; /* texto branco para contraste */
+      background-color: green;
+      color: #fff;
     }
-    /* Botão de retorno */
     .botao-voltar {
       background-color: #FFD700;
       color: #000;
@@ -89,43 +88,88 @@
       font-size: 14px;
       color: #333;
     }
+
+    /* Container lateral para imagens */
+    .lateral {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 360px; /* aumentei largura da coluna */
+      padding: 10px;
+    }
+    .lateral img {
+      width: 340px;   /* antes 225px → +50% */
+      height: 260px;  /* antes 175px → +50% */
+      margin: 25px 0;
+      opacity: 0.95;
+      border-radius: 8px;
+    }
+    .conteudo {
+      display: flex;
+      flex-direction: row;
+    }
+    .principal {
+      flex: 1;
+      padding: 0 20px;
+    }
   </style>
 </head>
 <body>
 
   <h1>Nossos Serviços</h1>
 
-  <div class="servico">
-    <button onclick="window.open('manutencao.html', '_blank')" class="botao-servico">
-      Manutenção de Computadores
-    </button>
-    <p style="font-size: 20px;">Reparo, limpeza e otimização de desktops e notebooks.</p>
-  </div>
+  <div class="conteudo">
+    <!-- Lateral esquerda -->
+    <div class="lateral">
+      <img src="https://imgur.com/V5bQrwQ.png" alt="Imagem 1">
+      <img src="https://imgur.com/l4tByft.png" alt="Imagem 2">
+      <img src="https://imgur.com/1jfxSRW.png" alt="Imagem 3">
+      <img src="https://imgur.com/d1947CS.png" alt="Imagem 4">
+    </div>
 
-  <div class="servico">
-    <button onclick="window.open('servico.html', '_blank')" class="botao-servico">
-      Redes e Servidores
-    </button>
-    <p style="font-size: 20px;">Instalação, configuração e suporte para redes corporativas e domésticas.</p>
-  </div>
+    <!-- Conteúdo principal -->
+    <div class="principal">
+      <div class="servico">
+        <button onclick="window.open('manutencao.html', '_blank')" class="botao-servico">
+          Manutenção de Computadores
+        </button>
+        <p style="font-size: 20px;">Reparo, limpeza e otimização de desktops e notebooks.</p>
+      </div>
 
-  <div class="servico">
-    <button onclick="window.open('seguranca.html', '_blank')" class="botao-servico">
-      Segurança Digital
-    </button>
-    <p style="font-size: 20px;">Proteção de dados, antivírus, backups e soluções contra invasões.</p>
-  </div>
+      <div class="servico">
+        <button onclick="window.open('servico.html', '_blank')" class="botao-servico">
+          Redes e Servidores
+        </button>
+        <p style="font-size: 20px;">Instalação, configuração e suporte para redes corporativas e domésticas.</p>
+      </div>
 
-  <!-- Botão de retorno -->
-  <div class="centralizado">
-    <button onclick="window.location.href='index.html'" class="botao-voltar">
-      Voltar para a página inicial
-    </button>
-  </div>
+      <div class="servico">
+        <button onclick="window.open('seguranca.html', '_blank')" class="botao-servico">
+          Segurança Digital
+        </button>
+        <p style="font-size: 20px;">Proteção de dados, antivírus, backups e soluções contra invasões.</p>
+      </div>
 
-  <!-- Imagem de manutenção -->
-  <div class="imagem-manutencao">
-    <img src="https://imgur.com/NHHwdET.png" alt="Página em Manutenção">
+      <!-- Botão de retorno -->
+      <div class="centralizado">
+        <button onclick="window.location.href='index.html'" class="botao-voltar">
+          Voltar para a página inicial
+        </button>
+      </div>
+
+      <!-- Imagem de manutenção -->
+      <div class="imagem-manutencao">
+        <img src="https://imgur.com/8YsooX1.png" alt="Página em Manutenção">
+      </div>
+    </div>
+
+    <!-- Lateral direita -->
+    <div class="lateral">
+      <img src="https://imgur.com/qkJuisR.png" alt="Imagem 5">
+      <img src="https://imgur.com/3X6uY1V.png" alt="Imagem 6">
+      <img src="https://imgur.com/kNYXa4e.png" alt="Imagem 7">
+    </div>
   </div>
 
   <hr style="border: none; height: 2px; background-color: #333; margin: 4px 0;">
