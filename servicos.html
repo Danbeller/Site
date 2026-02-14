@@ -7,7 +7,7 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #0f1c2e;
-      color: white;
+      color: rgb(253, 252, 252);
       margin: 0;
       padding: 20px;
     }
@@ -21,6 +21,7 @@
       margin: 20px auto;
       border-radius: 8px;
       max-width: 600px;
+      text-align: center;
     }
     .servico h2 {
       color: #FFA500;
@@ -35,6 +36,20 @@
     a:hover {
       text-decoration: underline;
     }
+    .botao-servico {
+      background-color: #FFD700; /* cor original (dourado) */
+      color: #000;
+      border: none;
+      width: 550px;
+      height: 60px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .botao-servico:hover {
+      background-color: green; /* cor ao passar o mouse */
+      color: #fff; /* opcional: texto branco para contraste */
+    }
   </style>
 </head>
 <body>
@@ -42,8 +57,10 @@
   <h1>Nossos Serviços</h1>
 
   <div class="servico">
-    <h2>Manutenção de Computadores</h2>
-    <p>Reparo, limpeza e otimização de desktops e notebooks.</p>
+    <button onclick="window.open('manutencao.html', '_blank')" class="botao-servico">
+      Manutenção de Computadores
+    </button>
+    <p style="font-size: 20px;">Reparo, limpeza e otimização de desktops e notebooks.</p>
   </div>
 
   <div class="servico">
@@ -56,33 +73,27 @@
     <p>Proteção de dados, antivírus, backups e soluções contra invasões.</p>
   </div>
 
-<div style="text-align: center; margin-top: 50px;">
-  <button 
-    onclick="window.location.href='index.html'" 
-    style="background-color: #FFD700; 
-           color: #000; 
-           border: none; 
-           padding: 12px 25px; 
-           font-size: 18px; 
-           border-radius: 12px; 
-           cursor: pointer;"
-    onmouseover="this.style.backgroundColor='#FFA500';"
-    onmouseout="this.style.backgroundColor='#FFD700';">
-    Voltar para a página inicial
-  </button>
-</div>
+  <div style="text-align: center; margin-top: 50px;">
+    <button 
+      onclick="window.location.href='index.html'" 
+      style="background-color: #FFD700; 
+             color: #000; 
+             border: none; 
+             padding: 12px 25px; 
+             font-size: 18px; 
+             border-radius: 12px; 
+             cursor: pointer;"
+      onmouseover="this.style.backgroundColor='#FFA500';"
+      onmouseout="this.style.backgroundColor='#FFD700';">
+      Voltar para a página inicial
+    </button>
+  </div>
 
+  <div style="position: relative; height: 800px; text-align: center; margin-top: 40px;">
+    <img src="https://imgur.com/NHHwdET.png" alt="Página em Manutenção"
+         width="600" height="400"
+         style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%);" />
+  </div>
 
 </body>
-
-
-<div style="position: relative; height: 800px;">
-  <img src="https://imgur.com/NHHwdET.png" alt="Página em Manutenção"
-       width="600" height="400"
-       style="position: absolute; top: 50px; left: 640px;" />
-</div>
-
-
-
-
 </html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ordem de Serviço - Info Tech</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0f1c2e;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #FFD700;
+}
+form {
+  background-color: #1a2b4c;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+button {
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+button:hover {
+  background-color: green;
+  color: #fff;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Solicitação de Ordem de Serviço</h1>
+
+<form id="formOS">
+
+<label for="nome">Nome do Cliente:</label>
+<input type="text" id="nome" name="nome" required>
+
+<label for="telefone">Telefone:</label>
+<input type="tel" id="telefone" name="telefone" required>
+
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email">
+
+<label for="endereco">Endereço:</label>
+<input type="text" id="endereco" name="endereco">
+
+<label for="equipamento">Equipamento:</label>
+<select id="equipamento" name="equipamento" required>
+  <option value="">Selecione...</option>
+  <option>Computador Desktop</option>
+  <option>Notebook</option>
+  <option>Servidor</option>
+  <option>Rede/Infraestrutura</option>
+</select>
+
+<label for="problema">Descrição do Problema:</label>
+<textarea id="problema" name="problema" rows="4" required></textarea>
+
+<label for="data">Data Preferencial:</label>
+<input type="date" id="data" name="data">
+
+<label for="urgencia">Nível de Urgência:</label>
+<select id="urgencia" name="urgencia">
+  <option>Normal</option>
+  <option>Alta</option>
+  <option>Emergência</option>
+</select>
+
+<button type="submit">Registrar Ordem de Serviço</button>
+
+</form>
+
+<script>
+document.getElementById("formOS").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let nome = document.getElementById("nome").value;
+  let telefone = document.getElementById("telefone").value;
+  let email = document.getElementById("email").value;
+  let endereco = document.getElementById("endereco").value;
+  let equipamento = document.getElementById("equipamento").value;
+  let problema = document.getElementById("problema").value;
+  let data = document.getElementById("data").value;
+  let urgencia = document.getElementById("urgencia").value;
+
+  let mensagem =
+`📋 *Nova Ordem de Serviço*
+
+👤 Cliente: ${nome}
+📞 Telefone: ${telefone}
+📧 Email: ${email}
+📍 Endereço: ${endereco}
+
+💻 Equipamento: ${equipamento}
+🛠 Problema: ${problema}
+
+📅 Data Preferencial: ${data}
+⚠ Urgência: ${urgencia}`;
+
+  let numero = "5518996622714";
+  let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(url, "_blank");
+});
+</script>
+
+
+<!--Button Return Page-->
+    <div class="centralizado">
+      <button onclick="window.location.href='index.html'" class="botao-voltar">
+        Voltar para a página inicial
+      </button>
+    </div>
+
+</body>
+</html>
