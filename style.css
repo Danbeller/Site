@@ -1,0 +1,196 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo-img {
+    height: 50px; /* ajuste conforme necessário */
+    margin-right: 15px;
+}
+
+/* Cabeçalho */
+header {
+    background: #0a0f24;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00c3ff;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(to right, #0a0f24, #1a2a6c);
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #00c3ff;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0077b6;
+}
+
+/* Serviços */
+.servicos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.servicos h2 {
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #0a0f24;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-video {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.card-video video {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Sobre */
+.sobre {
+    background: #eef2f3;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sobre h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #0a0f24;
+}
+
+.sobre p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1em;
+}
+
+/* Contato */
+.contato {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contato h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #0a0f24;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #00c3ff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0077b6;
+}
+
+/* Rodapé */
+footer {
+    background: #0a0f24;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner-final {
+    width: 100%;       /* ocupa toda a largura da página */
+    display: block;
+    margin-top: 20px;
+}
