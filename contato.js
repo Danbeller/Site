@@ -2,7 +2,7 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
 // Substitua pelas suas credenciais do Supabase
-const supabaseUrl = "https://site-web.supabase.co"   // Project URL
+const supabaseUrl = "https://pqiofxlqcgxcnqqcxxpx.supabase.co"   // Project URL
 const supabaseKey = "sb_publishable_0QtYe3535fpI70jONxLQDQ_y6RXNbGP"               // Publishable key (anon)
 const supabase = createClient(supabaseUrl, supabaseKey)
 
