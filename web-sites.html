@@ -60,15 +60,19 @@
         <p>Sou Técnico de Informática especializado em desenvolvimento web. Minha missão é ajudar empresas e profissionais a terem presença digital de impacto, com sites modernos e otimizados.</p>
     </section>
 
-    <section id="contato" class="contato">
-        <h2>Entre em Contato</h2>
-        <form>
-            <input type="text" placeholder="Seu Nome" required>
-            <input type="email" placeholder="Seu Email" required>
-            <textarea placeholder="Sua Mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+   
     </section>
+
+    <section id="contato" class="contato">
+  <h2>Entre em Contato</h2>
+  <form id="form-contato">
+  <input type="text" name="nome" placeholder="Seu Nome" required>
+  <input type="email" name="email" placeholder="Seu Email" required>
+  <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+  <button type="submit">Enviar</button>
+</form>
+</section>
+
 
 <div style="text-align:center;">
   <a href="index.html" class="btn">Voltar para página inicial</a>
@@ -79,5 +83,9 @@
     <footer>
         <p>© 2026 Info Tech Araçatuba - Todos os direitos reservados.</p>
     </footer>
+<div style="text-align:center; margin-top:20px;">
+  <a href="admin.html" class="btn">Abrir Painel Admin</a>
+</div>
+    <script type="module" src="contato.js"></script>
 </body>
 </html>
