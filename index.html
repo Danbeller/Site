@@ -5,6 +5,28 @@
   <title>Info Tech Araçatuba - Suporte Técnico</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <script type="module">
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+  const supabaseUrl = "https://site-web.supabase.co"
+  const supabaseKey = "sb_publishable_0QtYe3535fpI70jONxLQDQ_y6RXNbGP"
+  const supabase = createClient(supabaseUrl, supabaseKey)
+
+  async function carregarContatos() {
+    let { data, error } = await supabase
+      .from('contatos')
+      .select('*')
+
+    if (error) {
+      console.error(error)
+    } else {
+      console.log(data)
+    }
+  }
+
+  carregarContatos()
+</script>
+
   <!-- Fonte Orbitron -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
