@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manutenção de Computadores | Info Tech Araçatuba</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
     <script>
@@ -27,24 +31,35 @@
     </script>
 </head>
 
-<body class="bg-darkbg text-white font-body">
+<body class="text-white font-body">
 
-<div class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <!-- VIDEO BACKGROUND -->
+    <video autoplay muted loop playsinline class="video-bg">
+        <source src="./videos/video-1.mp4" type="video/mp4">
+    </video>
 
-    <h1 class="font-display text-5xl text-primary mb-6">
-        Manutenção de Computadores
-    </h1>
+    <!-- OVERLAY -->
+    <div class="overlay"></div>
 
-    <p class="text-gray-400 max-w-2xl mb-10">
-        Realizamos formatação, upgrades, troca de peças, limpeza interna,
-        remoção de vírus e otimização completa do seu equipamento.
-    </p>
+    <!-- CONTEÚDO -->
+    <div class="min-h-screen flex flex-col justify-center items-center text-center px-6 gap-8">
 
-    <a href="index.html" class="btn-primary">
-        VOLTAR AO SITE
-    </a>
+        <h1 class="font-display text-5xl md:text-6xl text-primary glow-title -mt-16">
+    Manutenção de Computadores
+</h1>
 
-</div>
+        <p class="descricao-servico">
+            Realizamos formatação, upgrades, troca de peças, limpeza interna,
+            remoção de vírus e otimização completa do seu equipamento.
+            Atendimento profissional em Araçatuba e região.
+        </p>
 
+        <a href="index.html" class="btn-primary">
+            VOLTAR AO SITE
+        </a>
+
+    </div>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -24,3 +24,9 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
     window.open(url, "_blank");
 });
+
+// Futuras animações podem ser adicionadas aqui
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Página Manutenção carregada com sucesso 🚀");
+});

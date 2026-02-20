@@ -1,3 +1,4 @@
+
 .hero-bg {
     background: radial-gradient(circle at center, rgba(0,240,255,0.15), transparent 70%);
 }
@@ -95,4 +96,60 @@
 
 .service-card {
     cursor: pointer;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* VIDEO BACKGROUND */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* OVERLAY FUTURISTA */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0,0,0,0.85),
+        rgba(0, 240, 255, 0.15)
+    );
+    z-index: -1;
+}
+
+/* GLOW NO TÍTULO */
+.glow-title {
+    text-shadow: 0 0 25px rgba(0, 240, 255, 0.8);
+}
+
+/* BOTÃO */
+.btn-primary {
+    background: #00f0ff;
+    color: black;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.btn-primary:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+.descricao-servico {
+    font-size: 3rem; /* 45% maior */
+    max-width: 750px;
+    color: #d1d5db;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
 }
