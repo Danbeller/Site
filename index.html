@@ -1,280 +1,192 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Info Tech Araçatuba - Suporte Técnico</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script type="module">
-  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+    <title>Info Tech Araçatuba | Soluções em TI</title>
 
-  const supabaseUrl = "https://site-web.supabase.co"
-  const supabaseKey = "sb_publishable_0QtYe3535fpI70jONxLQDQ_y6RXNbGP"
-  const supabase = createClient(supabaseUrl, supabaseKey)
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  async function carregarContatos() {
-    let { data, error } = await supabase
-      .from('contatos')
-      .select('*')
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-    if (error) {
-      console.error(error)
-    } else {
-      console.log(data)
-    }
-  }
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  carregarContatos()
-</script>
+    <link rel="stylesheet" href="style.css">
 
-  <!-- Fonte Orbitron -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f1c2e;
-      color: white;
-    }
-
-    header {
-      background-color: #1a2b4c;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      text-align: center;
-      color: #acabab;
-    }
-
-    .logo img {
-      width: 90px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: #ffffff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #FFD700;
-    }
-
-    .hero {
-      background-image: url('https://imgur.com/7PKMaSr.png');
-      background-size: cover;
-      background-position: center;
-      padding: 100px 20px;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero h1 {
-      font-size: 78px;
-      margin-bottom: 60px;
-      color: #fcdb24;
-      text-shadow: -2px -2px 0 #646464,
-                   2px -2px 0 #5f5f5f,
-                  -2px  2px 0 #3a3a3a,
-                   4px  4px 0 #636262;
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .hero p {
-      font-size: 28px;
-      color: black;
-      font-family: 'Orbitron', sans-serif;
-      max-width: 600px;
-      margin: 0 auto 30px;
-    }
-
-    .hero button {
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .hero button:hover {
-      background-color: #0056b3;
-    }
-
-    .services {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      padding: 60px 20px;
-      background-color: #14263f;
-    }
-
-    .service {
-      text-align: center;
-      max-width: 250px;
-      margin: 20px;
-    }
-
-    .service img {
-      width: 80px;
-      margin-bottom: 15px;
-    }
-
-    .service h3 {
-      color: #FFD700;
-      margin-bottom: 10px;
-    }
-
-    .service p {
-      font-size: 16px;
-    }
-
-    footer {
-      background-color: #1a2b4c;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #ccc;
-    }
-
-    .brand-logos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
-
-    .brands h2 {
-      font-size: 32px;
-      margin-bottom: 30px;
-      color: #e9e505;
-      font-weight: 700;
-    }
-
-    .brand img {
-      display: block;
-      margin: 8px auto 0;
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 32px;
-      }
-      .hero p {
-        font-size: 16px;
-      }
-      nav {
-        text-align: center;
-        width: 100%;
-      }
-      nav a {
-        display: inline-block;
-        margin: 10px;
-      }
-    }
-  </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00f0ff',
+                        darkbg: '#0d0d0d',
+                        darkcard: '#141414'
+                    },
+                    fontFamily: {
+                        display: ['Orbitron', 'sans-serif'],
+                        body: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
 
-  <header>
-    <div class="logo">
-      <img src="https://imgur.com/xt1dhAd.png" alt="Logo Info Tech Araçatuba">
-      <div style="font-size: 100%;">Info Tech Araçatuba</div>
-    </div>
-    <nav>
-      <a href="web-sites.html">WEB-SITES</a>
-      <a href="servicos.html">SERVIÇOS</a>
-      <a href="sobre.html">SOBRE</a>
-      <a href="https://wa.me/5518996622714?text=Olá%20quero%20mais%20informações" target="_blank">CONTATO</a>
-    </nav>
-  </header>
+<body class="bg-darkbg text-white font-body overflow-x-hidden">
 
-  <section class="hero">
-    <h1>SUPORTE TÉCNICO CONFIÁVEL</h1>
-    <p>
-      Oferecemos serviços especializados em TI para resolver seus problemas com eficiência e segurança.
-    </p>
-    <button onclick="window.open('https://www.facebook.com/infotecharcatuba/', '_blank')" 
-            style="position: absolute; top: 10px; left: 10px; background-color: #1877f2; color: white; border: none; padding: 8px 8px; font-size: 18px; border-radius: 8px; cursor: pointer;">
-      FACEBOOK
-    </button>
-  </section>
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-20">
 
-  <section class="services">
-    <div class="service">
-      <img src="https://img.icons8.com/ios-filled/100/computer.png" alt="Manutenção">
-      <h3>Manutenção</h3>
-      <p>Reparo e otimização de computadores e notebooks com rapidez e qualidade.</p>
-    </div>
-    <div class="service">
-      <img src="https://img.icons8.com/ios-filled/100/network.png" alt="Redes">
-      <h3>Redes</h3>
-      <p>Instalação e configuração de redes domésticas e corporativas seguras.</p>
-    </div>
-    <div class="service">
-      <img src="https://img.icons8.com/ios-filled/100/lock.png" alt="Segurança">
-      <h3>Segurança</h3>
-      <p>Proteção de dados, antivírus, backups e soluções contra invasões.</p>
-    </div>
-  </section>
+            <div class="flex items-center gap-3 cursor-pointer" onclick="scrollToTop()">
+                <i class="fas fa-microchip text-primary text-3xl"></i>
+                <span class="font-display text-2xl tracking-wider">
+                    INFO <span class="text-primary">TECH</span> ARAÇATUBA
+                </span>
+            </div>
 
- <section class="brands">
-  <h2 style="text-align: center;">Marcas que confiamos</h2>
-  <div class="brand-logos">
-    <a href="https://www.nvidia.com" target="_blank" class="brand">
-      NVIDIA
-      <img src="https://imgur.com/8SgGLnU.png" alt="NVIDIA logo preview">
-    </a>
-    <a href="https://www.amd.com" target="_blank" class="brand">
-      AMD
-      <img src="https://imgur.com/V2igShR.png" alt="AMD logo preview">
-    </a>
-    <a href="https://www.intel.com" target="_blank" class="brand">
-      Intel
-      <img src="https://imgur.com/QzVEkml.png" alt="Intel logo preview">
-    </a>
-    <a href="https://www.dell.com" target="_blank" class="brand">
-      DELL
-      <img src="https://imgur.com/VfjwkDd.png" alt="Dell logo preview">
-    </a>
-    <a href="https://www.lenovo.com" target="_blank" class="brand">
-      LENOVO
-      <img src="https://imgur.com/0vMiGmo.png" alt="Lenovo logo preview">
-    </a>
-    <a href="https://www.microsoft.com" target="_blank" class="brand">
-      MICROSOFT
-      <img src="https://imgur.com/w06FtXj.png" alt="Microsoft logo preview">
-    </a>
-  </div>
+            <div class="hidden md:flex gap-8 text-sm font-semibold">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#services" class="nav-link">Serviços</a>
+                <a href="#sites" class="nav-link">Venda de Sites</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </div>
+
+            <button class="md:hidden text-2xl" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden bg-black border-t border-gray-800">
+        <div class="flex flex-col p-4 gap-4">
+            <a href="#home">Início</a>
+            <a href="#services">Serviços</a>
+            <a href="#sites">Venda de Sites</a>
+            <a href="#contact">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="h-screen flex items-center justify-center relative text-center">
+
+    <div class="absolute inset-0 hero-bg"></div>
+
+    <div class="relative z-10 max-w-4xl px-6">
+        <h1 class="font-display text-5xl md:text-7xl mb-6 glow-text">
+            SOLUÇÕES COMPLETAS EM <span class="text-primary">TECNOLOGIA</span>
+        </h1>
+
+        <p class="text-gray-400 text-lg mb-8">
+            Manutenção, suporte, redes, segurança e criação de sites profissionais.
+            Tudo que sua empresa precisa em TI.
+        </p>
+
+        <a href="#contact" class="btn-primary">
+            SOLICITAR ORÇAMENTO
+        </a>
+    </div>
 </section>
 
+<!-- SERVIÇOS -->
+<section id="services" class="py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-6 text-center">
 
-   <hr style="border: none; height: 2px; background-color: #333; margin: 6px 0;">
+        <h2 class="section-title">NOSSOS SERVIÇOS</h2>
 
-  <footer style="text-align: center; padding: 5px; background-color: #f1f1f1; font-size: 14px; color: #333;">
-    © 2026 Info Tech Araçatuba. Todos os direitos reservados.
-  </footer>
+        <div class="grid md:grid-cols-3 gap-10 mt-16">
 
+            <a href="manutencao.html" class="block">
+    <div class="service-card cursor-pointer">
+        <i class="fas fa-laptop-code service-icon"></i>
+        <h3>Manutenção de Computadores</h3>
+        <p>Formatação, upgrades, limpeza interna e solução de problemas.</p>
+    </div>
+</a>
 
-  
+            <a href="redes-servidores.html" class="block">
+    <div class="service-card cursor-pointer">
+        <i class="fas fa-network-wired service-icon"></i>
+        <h3>Redes e Servidores</h3>
+        <p>Instalação, configuração e manutenção de redes empresariais.</p>
+    </div>
+</a>
+
+            <a href="seguranca-digital.html" class="block">
+    <div class="service-card cursor-pointer">
+        <i class="fas fa-shield-halved service-icon"></i>
+        <h3>Segurança Digital</h3>
+        <p>Proteção contra vírus, backups e firewall corporativo.</p>
+    </div>
+</a>
+
+        </div>
+    </div>
+</section>
+
+<!-- VENDA DE SITES -->
+<section id="sites" class="py-24 bg-darkbg">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <h2 class="section-title">CRIAÇÃO E VENDA DE SITES</h2>
+
+        <p class="text-gray-400 mt-4 max-w-3xl mx-auto">
+            Desenvolvemos sites modernos, responsivos e profissionais para empresas,
+            com foco em performance, vendas e presença digital.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-10 mt-16">
+
+            <div class="site-card">
+                <h3>Site Institucional</h3>
+                <p>Ideal para empresas que desejam presença online profissional.</p>
+                <span class="price">A partir de R$ 990</span>
+            </div>
+
+            <div class="site-card highlight">
+                <h3>Site Profissional + SEO</h3>
+                <p>Site otimizado para aparecer no Google e gerar clientes.</p>
+                <span class="price">A partir de R$ 1.490</span>
+            </div>
+
+            <div class="site-card">
+                <h3>E-commerce</h3>
+                <p>Loja virtual completa para vender seus produtos online.</p>
+                <span class="price">Sob orçamento</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contact" class="py-24 bg-black">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+
+        <h2 class="section-title">FALE CONOSCO</h2>
+
+        <form id="contactForm" class="mt-12 space-y-6">
+
+            <input type="text" id="name" placeholder="Seu nome" required class="input-style">
+            <input type="email" id="email" placeholder="Seu email" required class="input-style">
+            <textarea id="message" placeholder="Descreva seu projeto ou problema" required class="input-style h-32"></textarea>
+
+            <button type="submit" class="btn-primary w-full">
+                ENVIAR MENSAGEM
+            </button>
+        </form>
+
+    </div>
+</section>
+
+<footer class="bg-darkbg border-t border-gray-800 py-8 text-center text-gray-500">
+    © 2026 Info Tech Araçatuba - Todos os direitos reservados
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
