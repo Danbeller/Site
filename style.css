@@ -145,11 +145,52 @@ body {
 }
 
 .descricao-servico {
-    font-size: 3rem; /* 45% maior */
+    font-size: 2rem; /* 45% maior */
     max-width: 750px;
     color: #d1d5db;
     line-height: 1.8;
     letter-spacing: 1px;
     font-weight: 300;
     text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+}
+/* MATRIX CANVAS */
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.15; /* intensidade do efeito */
+    pointer-events: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    cursor: pointer;
+}
+
+.logo-img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    display: block;      /* Faz a imagem se comportar como bloco */
+    margin-left: 0;      /* Encosta no canto esquerdo */
+}
+
+.icon {
+    font-size: 30px;
+    color: #00ffff; /* ajuste para sua cor primary */
+}
+
+.logo-text {
+    font-size: 38px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
+
+.highlight {
+    color: #00ffff; /* mesma cor primary */
 }
