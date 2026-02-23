@@ -4,6 +4,7 @@
 
 body {
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 }
 
 .hero-bg {
@@ -24,16 +25,14 @@ body {
 
 .section-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    color: #00f0ff;
-    text-shadow: 0 0 15px #00f0ff70;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
 }
 
 .descricao-servico {
-    width: 800px;
-    max-width: 90%;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto 40px auto;
-    font-size: 1.6rem;
+    font-size: clamp(1rem, 4vw, 1.6rem);
     line-height: 1.8;
     text-align: justify;
     color: #d1d5db;
