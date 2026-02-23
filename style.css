@@ -11,6 +11,10 @@ body {
     background: radial-gradient(circle at center, rgba(0,240,255,0.15), transparent 70%);
 }
 
+.highlight {
+    color: #00f0ff;
+}
+
 .glow-text {
     text-shadow: 0 0 20px #00f0ff80;
 }
@@ -164,9 +168,11 @@ body {
 }
 
 .logo-text {
-    font-size: 38px;
+    font-size: clamp(20px, 6vw, 38px);
     letter-spacing: 1px;
     font-family: sans-serif;
+    text-align: center;
+    word-break: break-word;
 }
 
 /* =========================
