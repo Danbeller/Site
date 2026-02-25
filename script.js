@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =========================
-       MATRIX EFFECT
-    ========================== */
+  
 
     const canvas = document.getElementById("matrixCanvas");
 

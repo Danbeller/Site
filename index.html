@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Info Tech Araçatuba | Soluções em TI</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 
     <script>
@@ -35,28 +31,26 @@
 
 <body class="bg-darkbg text-white font-body overflow-x-hidden">
 
-
 <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex justify-between items-center h-20">
 
             <div class="logo-container" onclick="scrollToTop()">
-    <img src="img/img-1.png" 
-         alt="Logo Info Tech Araçatuba"
-         class="logo-img">
-
-   
-
-    <span class="logo-text">
-        INFO <span class="highlight">TECH</span> ARAÇATUBA
-    </span>
-</div>
+                <img src="img/img-1.png" 
+                     alt="Logo Info Tech Araçatuba"
+                     class="logo-img">
+                <span class="logo-text">
+                    INFO <span class="highlight">TECH</span> ARAÇATUBA
+                </span>
+            </div>
 
             <div class="hidden md:flex gap-8 text-sm font-semibold">
                 <i class="fas fa-microchip icon"></i>
                 <a href="#home" class="nav-link">Início</a>
                 <a href="#services" class="nav-link">Serviços</a>
                 <a href="#sites" class="nav-link">Venda de Sites</a>
+                <!-- CORREÇÃO AQUI -->
+                <a href="clients.html" class="nav-link">Nossos Clientes</a>
                 <a href="#contact" class="nav-link">Contato</a>
             </div>
 
@@ -71,75 +65,67 @@
             <a href="#home">Início</a>
             <a href="#services">Serviços</a>
             <a href="#sites">Venda de Sites</a>
+            <!-- CORREÇÃO AQUI -->
+            <a href="clients.html">Nossos Clientes</a>
             <a href="#contact">Contato</a>
         </div>
     </div>
 </nav>
 
-
 <section id="home" class="h-screen flex items-center justify-center relative text-center">
-
     <div class="absolute inset-0 hero-bg"></div>
-
     <div class="relative z-10 max-w-4xl px-6">
         <h1 class="font-display text-5xl md:text-7xl mb-6 glow-text">
             SOLUÇÕES COMPLETAS EM <span class="text-primary">TECNOLOGIA</span>
         </h1>
-
         <p class="text-gray-400 text-lg mb-8">
             Manutenção, suporte, redes, segurança e criação de sites profissionais.
             Tudo que sua empresa precisa em TI.
         </p>
-
         <a href="#contact" class="btn-primary">
             SOLICITAR ORÇAMENTO
         </a>
     </div>
 </section>
 
-
 <canvas id="matrixCanvas"></canvas>
-
 
 <section id="services" class="py-24 bg-black">
     <div class="max-w-7xl mx-auto px-6 text-center">
-
         <h2 class="section-title">NOSSOS SERVIÇOS</h2>
 
         <div class="grid md:grid-cols-3 gap-10 mt-16">
 
             <a href="manutencao.html" class="block">
-    <div class="service-card cursor-pointer">
-        <i class="fas fa-laptop-code service-icon"></i>
-        <h3>Manutenção de Computadores</h3>
-        <p>Formatação, upgrades, limpeza interna e solução de problemas.</p>
-    </div>
-</a>
+                <div class="service-card cursor-pointer">
+                    <i class="fas fa-laptop-code service-icon"></i>
+                    <h3>Manutenção de Computadores</h3>
+                    <p>Formatação, upgrades, limpeza interna e solução de problemas.</p>
+                </div>
+            </a>
 
             <a href="redes-servidores.html" class="block">
-    <div class="service-card cursor-pointer">
-        <i class="fas fa-network-wired service-icon"></i>
-        <h3>Redes e Servidores</h3>
-        <p>Instalação, configuração e manutenção de redes empresariais.</p>
-    </div>
-</a>
+                <div class="service-card cursor-pointer">
+                    <i class="fas fa-network-wired service-icon"></i>
+                    <h3>Redes e Servidores</h3>
+                    <p>Instalação, configuração e manutenção de redes empresariais.</p>
+                </div>
+            </a>
 
             <a href="seguranca-digital.html" class="block">
-    <div class="service-card cursor-pointer">
-        <i class="fas fa-shield-halved service-icon"></i>
-        <h3>Segurança Digital</h3>
-        <p>Proteção contra vírus, backups e firewall corporativo.</p>
-    </div>
-</a>
+                <div class="service-card cursor-pointer">
+                    <i class="fas fa-shield-halved service-icon"></i>
+                    <h3>Segurança Digital</h3>
+                    <p>Proteção contra vírus, backups e firewall corporativo.</p>
+                </div>
+            </a>
 
         </div>
     </div>
 </section>
 
-
 <section id="sites" class="py-24 bg-darkbg">
     <div class="max-w-7xl mx-auto px-6 text-center">
-
         <h2 class="section-title">CRIAÇÃO E VENDA DE SITES</h2>
 
         <p class="text-gray-400 mt-4 max-w-3xl mx-auto">
@@ -150,22 +136,26 @@
         <div class="grid md:grid-cols-3 gap-10 mt-16">
 
             <a href="site-institucional.html" class="site-card">
-    <h3>Site Institucional</h3>
-    <p>Ideal para empresas que desejam presença online profissional.</p>
-    <span class="price">Sob orçamento</span>
-</a>
+                <h3>Site Institucional</h3>
+                <p>Ideal para empresas que desejam presença online profissional.</p>
+                <span class="price">Sob orçamento</span>
+            </a>
 
-<a href="site-profissional.html" class="site-card highlight">
-    <h3>Site Profissional + SEO</h3>
-    <p>Site otimizado para aparecer no Google e gerar clientes.</p>
-    <span class="price">Sob orçamento</span>
-</a>
+            <a href="site-profissional.html" class="site-card highlight">
+                <h3>Site Profissional + SEO</h3>
+                <p>Site otimizado para aparecer no Google e gerar clientes.</p>
+                <span class="price">Sob orçamento</span>
+            </a>
 
-<a href="ecommerce.html" class="site-card">
-    <h3>E-commerce</h3>
-    <p>Loja virtual completa para vender seus produtos online.</p>
-    <span class="price">Sob orçamento</span>
-</a>
+            <a href="ecommerce.html" class="site-card">
+                <h3>E-commerce</h3>
+                <p>Loja virtual completa para vender seus produtos online.</p>
+                <span class="price">Sob orçamento</span>
+            </a>
+
+            <a href="clients.html" class="btn-primary">
+                IR PARA CLIENTES
+            </a>
 
         </div>
     </div>
@@ -219,14 +209,11 @@
     </div>
 </section>
 
-
 <section id="contact" class="py-24 bg-black">
     <div class="max-w-4xl mx-auto px-6 text-center">
-
         <h2 class="section-title">FALE CONOSCO</h2>
 
         <form id="contactForm" class="mt-12 space-y-6">
-
             <input type="text" id="name" placeholder="Seu nome" required class="input-style">
             <input type="email" id="email" placeholder="Seu email" required class="input-style">
             <textarea id="message" placeholder="Descreva seu projeto ou problema" required class="input-style h-32"></textarea>
@@ -235,7 +222,6 @@
                 ENVIAR MENSAGEM
             </button>
         </form>
-
     </div>
 </section>
 

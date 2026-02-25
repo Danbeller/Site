@@ -318,3 +318,17 @@ body {
     height: 35px;
     object-fit: contain;
 }
+
+.video-container {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;  /* centraliza horizontal */
+}
+
+.video-container video {
+    width: 500px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+}
+

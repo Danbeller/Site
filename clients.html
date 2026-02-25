@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Clientes | Info Tech Araçatuba</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00f0ff',
+                        darkbg: '#0d0d0d',
+                        darkcard: '#141414'
+                    },
+                    fontFamily: {
+                        display: ['Orbitron', 'sans-serif'],
+                        body: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<script>
+function abrirProjetoLoja() {
+    const novaJanela = window.open("", "_blank");
+
+    novaJanela.document.write(`
+        <html>
+        <head>
+            <title>Projeto Loja de Roupas </title>
+            <style>
+                body {
+                    background: #1168ab;
+                    color: white;
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                    padding: 40px;
+                }
+                video {
+                    width: 700px;
+                    max-width: 90%;
+                    border-radius: 12px;
+                    margin-top: 20px;
+                }
+                .descricao {
+                    margin-top: 30px;
+                    font-size: 18px;
+                    color: #0a090a;
+                }
+            </style>
+        </head>
+        <body>
+            <h2>Loja de Roupas Shopping Praça Nova <p> ARAÇATUBA-SP</p> </h2>
+
+            <video autoplay muted loop playsinline controls>
+                <source src="videos/video-3.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+
+            <div class="descricao">
+                Instalações e configurações de PDVs em rede<br>
+                com ISO próprio do cliente.
+            </div>
+        </body>
+        </html>
+    `);
+}
+</script>
+<body class="bg-darkbg text-white font-body overflow-x-hidden">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-20">
+
+            <div class="logo-container" onclick="scrollToTop()">
+                <img src="img/img-1.png" 
+                     alt="Logo Info Tech Araçatuba"
+                     class="logo-img">
+
+                <span class="logo-text">
+                    INFO <span class="highlight">TECH</span> ARAÇATUBA
+                </span>
+            </div>
+
+            <div class="hidden md:flex gap-8 text-sm font-semibold">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="index.html#services" class="nav-link">Serviços</a>
+                <a href="index.html#sites" class="nav-link">Venda de Sites</a>
+                <a href="clients.html" class="nav-link text-primary">Nossos Clientes</a>
+                <a href="index.html#contact" class="nav-link">Contato</a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="h-screen flex items-center justify-center relative text-center">
+
+    <div class="absolute inset-0 hero-bg"></div>
+
+    <div class="relative z-10 max-w-4xl px-6">
+        <h1 class="font-display text-5xl md:text-7xl mb-6 glow-text">
+            NOSSOS <span class="text-primary">CLIENTES</span>
+        </h1>
+
+        <p class="text-gray-400 text-lg">
+            Conheça alguns projetos desenvolvidos pela Info Tech Araçatuba.
+        </p>
+    </div>
+</section>
+
+<!-- MATRIX EFFECT -->
+<canvas id="matrixCanvas"></canvas>
+
+<!-- CLIENTES -->
+<section class="py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <h2 class="section-title">PROJETOS REALIZADOS</h2>
+
+        <div class="grid md:grid-cols-3 gap-10 mt-16">
+
+            <div class="service-card" onclick="alert('EM BREVE')">
+    <h3>Clínica Estética</h3>
+    <p>Site institucional moderno com agendamento online.</p>
+    <a href="javascript:void(0)" class="price">Ver Projeto</a>
+</div>
+
+      <div class="service-card" onclick="abrirProjetoLoja()">
+    <h3>Loja de Roupas</h3>
+    <p>Loja Física PDVs completo com integração de pagamento.</p>
+    <a href="javascript:void(0)" class="price">Ver Projeto</a>
+</div>
+            <div class="service-card" onclick="alert('EM BREVE')">
+    <h3>Oficina Automotiva</h3>
+    <p>Site profissional com SEO otimizado para Google.</p>
+    <a href="javascript:void(0)" class="price">Ver Projeto</a>
+</div>
+
+            <div class="service-card" onclick="alert('EM BREVE')">
+    <h3>Empresa de Segurança</h3>
+    <p>Landing page focada em conversão e geração de leads.</p>
+    <a href="javascript:void(0)" class="price">Ver Projeto</a>
+</div>
+
+            <div class="service-card" onclick="alert('EM BREVE')">
+                <h3>Consultoria Empresarial</h3>
+                <p>Site institucional com blog e área administrativa.</p>
+                <a href="javascript:void(0)" class="price">Ver Projeto</a>
+            </div>
+
+            <div class="service-card" onclick="alert('EM BREVE')">
+                <h3>Restaurante Delivery</h3>
+                <p>Sistema online para pedidos e cardápio digital.</p>
+                <a href="javascript:void(0)" class="price">Ver Projeto</a>
+            </div>
+
+        </div>
+
+        
+        <div class="mt-16">
+            <a href="index.html" class="btn-primary">
+                VOLTAR AO SITE
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<footer class="bg-darkbg border-t border-gray-800 py-8 text-center text-gray-500">
+    © 2026 Info Tech Araçatuba - Todos os direitos reservados
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
