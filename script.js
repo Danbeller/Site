@@ -1,25 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-  
+    /* =========================
+       MATRIX EFFECT
+    ========================== */
 
     const canvas = document.getElementById("matrixCanvas");
 
     if (canvas) {
-
         const ctx = canvas.getContext("2d");
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
 
         const letters = "01";
         const fontSize = 16;
-        const columns = canvas.width / fontSize;
-
-        const drops = [];
-
-        for (let x = 0; x < columns; x++) {
-            drops[x] = 1;
-        }
+        const columns = Math.floor(canvas.width / fontSize);
+        const drops = Array(columns).fill(1);
 
         function draw() {
             ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
@@ -41,11 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         setInterval(draw, 33);
-
-        window.addEventListener("resize", () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
     }
 
     /* =========================
@@ -55,12 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactForm = document.getElementById("contactForm");
 
     if (contactForm) {
-        contactForm.addEventListener("submit", function(e) {
+        contactForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
 
             const phoneNumber = "5518996622714";
 
@@ -74,19 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             window.open(whatsappURL, "_blank");
         });
     }
-
 });
-
-
-function toggleMobileMenu() {
-    const menu = document.getElementById("mobileMenu");
-
-    if (menu.classList.contains("hidden")) {
-        menu.classList.remove("hidden");
-    } else {
-        menu.classList.add("hidden");
-    }
-}
 
 /* =========================
    SCROLL TO TOP
@@ -95,6 +79,6 @@ function toggleMobileMenu() {
 function scrollToTop() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: "smooth"
     });
 }
