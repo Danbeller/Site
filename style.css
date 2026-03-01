@@ -53,6 +53,12 @@ body {
    BOTÕES
 ========================= */
 
+.botao-container {
+    display: flex;
+    justify-content: center; /* mantém o conteúdo centralizado */
+    width: 100%; /* garante que a div ocupe toda a largura */
+}
+
 .btn-primary {
     background: #00f0ff;
     color: black;
@@ -61,10 +67,10 @@ body {
     font-weight: bold;
     transition: 0.4s;
     margin-top: 30px;
-    display: inline-block;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
+    width: 100%; /* botão ocupa toda a largura */
+    text-align: center; /* centraliza o texto dentro do botão */
 }
-
 
 
 /* =========================
